@@ -1,13 +1,63 @@
-function mostrarCarta(){
+// Botón para abrir el recuerdo
 
-    const contenido = document.getElementById("contenido");
+const boton = document.getElementById("abrir");
+const contenido = document.getElementById("contenido");
 
-    contenido.style.display = "block";
 
-    contenido.scrollIntoView({
-        behavior:"smooth"
+boton.addEventListener("click", function(){
+
+    contenido.classList.remove("oculto");
+
+    window.scrollTo({
+
+        top: contenido.offsetTop,
+
+        behavior: "smooth"
+
     });
 
-    document.querySelector(".portada").style.display="none";
+
+});
+
+
+
+// Animación al aparecer las secciones
+
+const elementos = document.querySelectorAll(".animado");
+
+
+const observador = new IntersectionObserver(
+
+(entries)=>{
+
+
+    entries.forEach((entrada)=>{
+
+
+        if(entrada.isIntersecting){
+
+            entrada.target.classList.add("visible");
+
+        }
+
+
+    });
+
+
+},
+
+{
+
+    threshold:0.2
 
 }
+
+);
+
+
+
+elementos.forEach((elemento)=>{
+
+    observador.observe(elemento);
+
+});
