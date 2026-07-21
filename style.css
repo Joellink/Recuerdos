@@ -141,10 +141,9 @@ button:hover {
 
 
 .oculto {
-
-    display: none;
-
+    display:block;
 }
+
 
 
 section {
