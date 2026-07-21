@@ -1,63 +1,26 @@
-// Botón para abrir el recuerdo
+document.addEventListener("DOMContentLoaded", function(){
 
-const boton = document.getElementById("abrir");
-const contenido = document.getElementById("contenido");
-
-
-boton.addEventListener("click", function(){
-
-    contenido.classList.remove("oculto");
-
-    window.scrollTo({
-
-        top: contenido.offsetTop,
-
-        behavior: "smooth"
-
-    });
+    const boton = document.getElementById("abrir");
+    const contenido = document.getElementById("contenido");
 
 
-});
+    if(boton){
 
+        boton.addEventListener("click", function(){
 
+            contenido.style.display = "block";
 
-// Animación al aparecer las secciones
+            window.scrollTo({
 
-const elementos = document.querySelectorAll(".animado");
+                top: contenido.offsetTop,
 
+                behavior: "smooth"
 
-const observador = new IntersectionObserver(
+            });
 
-(entries)=>{
+        });
 
+    }
 
-    entries.forEach((entrada)=>{
-
-
-        if(entrada.isIntersecting){
-
-            entrada.target.classList.add("visible");
-
-        }
-
-
-    });
-
-
-},
-
-{
-
-    threshold:0.2
-
-}
-
-);
-
-
-
-elementos.forEach((elemento)=>{
-
-    observador.observe(elemento);
 
 });
