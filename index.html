@@ -1,91 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti ❤️</title>
 
-<title>Para ti ❤️</title>
+    <meta name="robots" content="noindex,nofollow">
 
-<style>
-body{
-    margin:0;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-}
-
-.contenedor{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    max-width:350px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-
-h1{
-    color:#e91e63;
-}
-
-p{
-    font-size:18px;
-    line-height:1.6;
-}
-
-button{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:#e91e63;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#c2185b;
-}
-
-#mensaje{
-    display:none;
-    margin-top:20px;
-    color:#444;
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="portada">
+
 <h1>Para ti ❤️</h1>
 
-<p>
-Hay personas que llegan a nuestra vida y dejan recuerdos muy bonitos.
+<p class="frase">
+Hay recuerdos que nunca dejan de ocupar un lugar especial en el corazón.
 </p>
 
-<button onclick="mostrar()">
-Abrir ❤️
+<button onclick="mostrarCarta()">
+Abrir este recuerdo
 </button>
 
-<div id="mensaje">
+</div>
+
+<div id="contenido" style="display:none;">
+
+<section class="collage">
+
+<h2>Recuerdos que guardo en mi corazón</h2>
+
+<img src="img/collage.jpg" alt="Nuestros recuerdos">
+
+</section>
+
+<section class="carta">
+
+<h2>Una carta para ti</h2>
+
 <p>
-Solo quería regalarte un pequeño detalle para sacarte una sonrisa.<br><br>
-Gracias por todos los momentos compartidos. 💖
+Sé que estás muy decepcionada de mí y tienes toda la razón.
+Te falté al respeto y rompí la confianza que con tanto cariño habíamos construido.
+
+Me arrepiento profundamente por mis acciones y por el dolor que te causé.
+
+Aun así, quise hacerte este pequeño detalle porque cada una de estas fotos representa un momento que guardo con mucho cariño en mi corazón.
+
+Al verlas recuerdo nuestras salidas, las risas, las conversaciones e incluso aquella hamburguesa de cuatro porciones que hoy me saca una sonrisa.
+
+Quiero que sepas que eres una persona muy especial para mí.
+
+Gracias por todos esos momentos que me hicieron feliz.
+
+Mi mayor deseo es poder enmendar las cosas, seguir conociéndote y continuar creando recuerdos juntos.
+
+No espero que este detalle cambie lo ocurrido.
+
+Solo quiero que recuerdes cuánto valoro cada instante compartido contigo.
+
+Te quiero mucho ❤️
 </p>
-</div>
+
+</section>
+
+<section class="final">
+
+<img src="img/atardecer.jpg">
+
+<h2>
+Gracias por formar parte de estos recuerdos.
+</h2>
+
+</section>
 
 </div>
 
-<script>
-function mostrar(){
-document.getElementById("mensaje").style.display="block";
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
