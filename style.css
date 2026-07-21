@@ -4,179 +4,430 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:#f7f3ef;
-    color:#444;
-    line-height:1.8;
+
+    font-family:'Poppins',sans-serif;
+    background:#fff7f8;
+    color:#4a2633;
+    overflow-x:hidden;
+
 }
+
+
+/* PORTADA */
 
 .portada{
+
     min-height:100vh;
-    background:linear-gradient(135deg,#fff7f2,#fde7e6);
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:30px;
+
+    background:
+    linear-gradient(
+    rgba(255,182,193,0.35),
+    rgba(255,255,255,0.85)
+    ),
+    url("IMG_20240101_194815.jpg");
+
+    background-size:cover;
+    background-position:center;
+
 }
+
+
 
 .contenido-portada{
-    max-width:700px;
+
+    padding:30px;
+    animation:entrada 2s ease;
+
 }
 
-.portada h1{
-    color:#c85a7c;
-    font-size:48px;
+
+
+h1{
+
+    font-family:'Dancing Script',cursive;
+    font-size:5rem;
+    color:#b8325b;
     margin-bottom:20px;
+
 }
+
+
 
 .subtitulo{
-    font-size:22px;
-    margin-bottom:35px;
+
+    font-size:1.2rem;
+    max-width:600px;
+    margin:auto;
+    color:#5a3542;
+
 }
+
+
+
+/* BOTON */
+
 
 button{
-    background:#c85a7c;
-    color:white;
-    border:none;
-    border-radius:40px;
+
+    margin-top:40px;
+
     padding:15px 35px;
-    font-size:18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#d94f7b;
+
+    color:white;
+
+    font-size:1rem;
+
     cursor:pointer;
-    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(217,79,123,.35);
+
+    transition:.4s;
+
 }
+
+
 
 button:hover{
-    background:#a84665;
+
+    transform:scale(1.08);
+
+    background:#b8325b;
+
 }
 
-#contenido{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+
+
+
+
+/* CONTENIDO */
+
+
+.oculto{
+
+    display:none;
+
 }
+
+
+
+section{
+
+    padding:70px 20px;
+
+}
+
+
+
+
+h2{
+
+    text-align:center;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    color:#b8325b;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* RECUERDOS */
+
 
 .recuerdos{
+
     text-align:center;
+
 }
 
-.recuerdos h2{
-    color:#c85a7c;
-    margin-bottom:30px;
-}
+
 
 .collage{
-    display:block;
-    width:100%;
-    max-width:520px;
-    margin:0 auto;
-    border:10px solid #fff;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    width:min(90%,800px);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+
+    animation:flotar 5s infinite ease-in-out;
+
 }
+
+
+
+
+
+/* CARTA */
+
 
 .carta{
-    margin-top:60px;
-    background:#fff;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    background:white;
+
+    max-width:900px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.12);
+
 }
 
-.carta h2{
+
+
+.texto-carta{
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+    padding:20px;
+
+}
+
+
+
+.texto-carta p{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.firma{
+
     text-align:center;
-    color:#c85a7c;
-    margin-bottom:25px;
+
+    font-size:1.5rem;
+
+    color:#d94f7b;
+
+    font-weight:600;
+
 }
 
-.carta p{
-    font-size:18px;
-    white-space:pre-line;
-    .despedida{
+
+
+
+
+/* DESPEDIDA */
+
+
+.despedida{
+
     position:relative;
-    width:100%;
-    height:65vh;
-    margin-top:70px;
+
+    min-height:100vh;
+
+    padding:0;
+
     overflow:hidden;
-    border-radius:20px;
+
 }
+
+
 
 .despedida img{
-    position:absolute;
-    top:0;
-    left:0;
+
     width:100%;
-    height:100%;
+
+    height:100vh;
+
     object-fit:cover;
-    object-position:center;
-    z-index:1;
+
 }
+
+
 
 .overlay{
+
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:2;
+
+    inset:0;
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
 
-    background:rgba(0,0,0,.30);
-    color:white;
     text-align:center;
-    padding:25px;
+
+    padding:30px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.55)
+    );
+
+    color:white;
+
 }
+
+
 
 .overlay h2{
+
     color:white;
-    font-size:32px;
-    margin-bottom:15px;
-    text-shadow:0 2px 8px rgba(0,0,0,.6);
-}
 
-.overlay .final{
-    font-size:24px;
-    text-shadow:0 2px 8px rgba(0,0,0,.6);
-}
+    font-size:3.5rem;
 
-@media (max-width:768px){
-
-    .portada h1{
-        font-size:38px;
-    }
-
-    .subtitulo{
-        font-size:18px;
-    }
-
-    .carta{
-        padding:25px;
-    }
-
-    .carta p{
-        font-size:17px;
-    }
-
-    .overlay h2{
-        font-size:24px;
-    }
-
-    .overlay .final{
-        font-size:20px;
-    }
-
-    .despedida{
-        height:50vh;
-    }
+    text-shadow:0 5px 15px black;
 
 }
+
+
+
+.final{
+
+    font-size:1.4rem;
+
+    margin-top:20px;
+
+}
+
+
+
+
+
+/* ANIMACIONES */
+
+
+.animado{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1.2s ease;
+
+}
+
+
+
+.animado.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes flotar{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:600px){
+
+
+h1{
+
+    font-size:3.5rem;
+
+}
+
+
+
+h2{
+
+    font-size:2.3rem;
+
+}
+
+
+
+.subtitulo{
+
+    font-size:1rem;
+
+}
+
+
+
+.texto-carta{
+
+    font-size:.95rem;
+
+}
+
+
+
+.overlay h2{
+
+    font-size:2.5rem;
+
+}
+
+
+
 }
